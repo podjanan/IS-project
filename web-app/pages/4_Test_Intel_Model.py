@@ -27,7 +27,7 @@ st.markdown(f"""
 # ── Load Model ────────────────────────────────────────────────────────────
 @st.cache_resource
 def load_model():
-    return tf.keras.models.load_model("models/intel_nn_model_93_9.h5")
+    return tf.keras.models.load_model("web-app/models/intel_nn_model_93_9.h5")
 
 model = load_model()
 class_names = ["buildings","forest","glacier","mountain","sea","street"]
