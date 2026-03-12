@@ -28,7 +28,7 @@ st.markdown(f"""
 # ── Load Models ───────────────────────────────────────────────────────────
 @st.cache_resource
 def load_models():
-    ensemble_model = joblib.load("models/garbage_ensemble_model.pkl")
+    ensemble_model = joblib.load("web-app/models/garbage_ensemble_model.pkl")
     feature_extractor = MobileNetV2(weights="imagenet", include_top=False, pooling="avg", input_shape=(224,224,3))
     return ensemble_model, feature_extractor
 
